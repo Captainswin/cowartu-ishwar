@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Cowartu – Train Your Voice, Build Your Career</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-
-
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -18,6 +18,44 @@
     --gray: #8892A4;
     --card-bg: #1E2A45;
   }
+  .btn-course {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px 48px;
+  background: linear-gradient(135deg, #F5A623 0%, #FFD166 50%, #F5A623 100%);
+  background-size: 200% auto;
+  color: var(--navy2);
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.5px;
+  box-shadow: -4px 0 18px rgba(255,255,255,0.15), 4px 0 18px rgba(255,255,255,0.15), 0 8px 24px rgba(245,166,35,0.4);
+  transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  animation: shineMove 3s linear infinite;
+}
+.btn-course:hover {
+  background-position: right center;
+  transform: translateY(-3px);
+  box-shadow: -6px 0 24px rgba(255,255,255,0.25), 6px 0 24px rgba(255,255,255,0.25), 0 12px 32px rgba(245,166,35,0.55);
+}
+@keyframes shineMove {
+  0%   { background-position: 0% center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+@media(max-width:620px){
+  .btn-course {
+    width: 100%;
+    padding: 15px 24px;
+    font-size: 0.97rem;
+  }
+}
   .social-icon {
   display: inline-flex;
   align-items: center;
@@ -34,11 +72,11 @@
 .social-icon-tg { color: #29A8E0; }
 .social-icon-wa { color: #25D366; }
 .course-title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 900;
   font-size: 1.4rem;
   letter-spacing: 0.5px;
-  color: var(--gold);         /* gold color for extra premium look */
+  color: var(--white);
   text-transform: uppercase;
 }
 .whatsapp-banner {
@@ -319,12 +357,12 @@
       <div class="hero-btns">
         <a href="#" onclick="navigate('courses')" class="btn-gold">Explore Courses</a>
        
-<a href="https://wa.me/919279044047?text=Hi%20Cowartu%20%F0%9F%91%8B%0AI%20want%20to%20join%20the%20community." target="_blank" class="btn-outline" style="display:inline-flex;align-items:center;gap:8px;">
+<a href="https://chat.whatsapp.com/ItUqXznzdgR7CnewWq7qWe?mode=gi_t" target="_blank" class="btn-outline" style="display:inline-flex;align-items:center;gap:8px;">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
     <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.553 4.118 1.524 5.855L0 24l6.335-1.499A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.38l-.36-.214-3.733.883.916-3.619-.235-.372A9.818 9.818 0 1112 21.818z"/>
   </svg>
-  Join WhatsApp
+  Join Community
 </a>
       </div>
       <div class="hero-stats">
@@ -356,13 +394,22 @@
     <div class="courses-grid">
       <div class="course-card reveal">
         <span class="course-badge badge-starter">Starter</span>
-          <div class="course-icon">📖</div>
+          <div class="course-icon" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src=" https://lottie.host/653ff42f-1425-4ac7-a722-43f90d09f980/SzqGzSmoy3.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div>
         
         <h3 class="course-title">PDF Document Course</h3>
-        <p>DOC B1 Voice Acting Document Course — a beginner-friendly PDF that builds a strong foundation. Emotion, delivery flow, voice modulation, accent & energy control. Hindi & English.</p>
+        <p>DOC B1 Voice Acting Document Course — Beginner-friendly PDF for building a core foundation. Available in Hindi & English..</p>
         <div class="price-old">₹499 <span class="price-save">80% OFF</span></div>
         <div class="price">₹99</div>
-        <div class="price-label">One-time payment • Instant Access</div>
+        <div class="price-label">One-time payment • Instant 30 Days Digital Access</div>
         <ul class="course-features">
           <li>Core fundamentals of voice acting</li>
           <li>Common beginner challenges & solutions</li>
@@ -370,34 +417,45 @@
           <li>Voice modulation training</li>
           <li>Energy control guidance</li>
           <li>Hindi & English content</li>
+          <li>Guidance Support</li>
         </ul>
        <a href="https://wa.me/919279044047?text=Hi%20Cowartu%20%F0%9F%91%8B%0AI%20want%20to%20buy%20the%20%E2%82%B999%20PDF%20Course." 
    target="_blank" 
-   class="btn-gold">
-  Get Course 
+   class="btn-course">
+  Get Course
 </a>
       </div>
       <div class="course-card reveal" style="transition-delay:.15s;">
         <span class="popular-tag">⭐ Most Popular</span>
         <span class="course-badge badge-pro">Masterclass</span>
-         <div class="course-icon">🔴</div>
+         <div class="course-icon" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src="https://lottie.host/ddb342ba-1c14-45cc-9854-e8146b71b586/GrbEKM98nU.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div>
         <h3 class="course-title">Live Master Class Course</h3>
         <p>Comprehensive, interactive training from fundamentals to professional-level performance. Live classes in Hindi with real-time feedback, mentorship & personalized corrections.</p>
         <div class="price-old">₹5,499 <span class="price-save">39% OFF</span></div>
         <div class="price">₹3,333</div>
-        <div class="price-label">Full Program • Live Classes</div>
+        <div class="price-label">Full Program • Regular Live 45 Days Classes • One-time payment</div>
         <ul class="course-features">
           <li>Live interactive sessions in Hindi</li>
           <li>Real-time feedback & mentorship</li>
           <li>Voice modulation training</li>
           <li>Character performance techniques</li>
           <li>Career support & industry guidance</li>
-          <li>Telegram community access</li>
+          <li>Certification After Course</li>
+          <li>Guidance Support</li>
         </ul>
-        <a href="https://wa.me/919279044047?text=Hi%20Cowartu%20%F0%9F%91%8B%0AI%20want%20to%20buy%20the%20%E2%82%B999%20PDF%20Course." 
+        <a href="https://wa.me/919279044047?text=Hi%20Cowartu%20%F0%9F%91%8B%0AI%20want%20to%20buy%20the%20%E2%82%B93333%20Live%20Master%20Class%20Course." 
    target="_blank" 
-   class="btn-gold">
-  Get Course 
+   class="btn-course">
+  Get Course
 </a>
       </div>
     </div>
@@ -427,10 +485,46 @@
       <p class="section-sub">Expert-led training in Hindi and English, flexible for students across India.</p>
     </div>
     <div class="features-grid">
-      <div class="feature-card reveal"><div class="feature-icon">🏆</div><h4>Expert Guidance</h4><p>Professional voice actors from the industry guide you through every step.</p></div>
-      <div class="feature-card reveal" style="transition-delay:.1s;"><div class="feature-icon">🏠</div><h4>Flexible Learning</h4><p>Learn from the comfort of your home, on your own schedule.</p></div>
-      <div class="feature-card reveal" style="transition-delay:.2s;"><div class="feature-icon">🚀</div><h4>Career Support</h4><p>Guidance on industry work, portfolio building, finding clients & becoming professional.</p></div>
-      <div class="feature-card reveal" style="transition-delay:.3s;"><div class="feature-icon">🎯</div><h4>Hands-On Practice</h4><p>Work on real projects and get personalized feedback to sharpen your skills.</p></div>
+      <div class="feature-card reveal"><div class="feature-icon" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src=" https://lottie.host/3435bc5f-c91f-4471-b81f-2fb324f20235/wWx2AksXZi.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div><h4>Expert Guidance</h4><p>Professional voice actors from the industry guide you through every step.</p></div>
+      <div class="feature-card reveal" style="transition-delay:.1s;"><div class="feature-icon" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src="https://lottie.host/9bb3e903-1ca4-4f37-8ada-074af7521db0/tTNkzWyVf0.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div><h4>Flexible Learning</h4><p>Learn from the comfort of your home, on your own schedule.</p></div>
+      <div class="feature-card reveal" style="transition-delay:.2s;"><div class="feature-icon" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src="https://lottie.host/860fe077-9e41-49e8-bc14-7bfec1649b9b/N8wuD1Pj15.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div><h4>Career Support</h4><p>Guidance on industry work, portfolio building, finding clients & becoming professional.</p></div>
+      <div class="feature-card reveal" style="transition-delay:.3s;"><div class="feature-icon" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src="https://lottie.host/37b1758d-b4b4-4cbb-b982-1f74479abcb3/K5bm89Ibx9.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div><h4>Hands-On Practice</h4><p>Work on real projects and get personalized feedback to sharpen your skills.</p></div>
     </div>
   </section>
 
@@ -445,12 +539,12 @@
       <p style="color:var(--gray);max-width:500px;margin:0 auto 32px;line-height:1.7;">Join the Cowartu community and stay updated with tips, sessions, and announcements.</p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
         <!-- AFTER -->
-<a href="https://wa.me/919279044047?text=Hi%20Cowartu%20%F0%9F%91%8B%0AI%20want%20to%20join%20the%20community." target="_blank" class="btn-outline" style="display:inline-flex;align-items:center;gap:8px;">
+<a href="https://chat.whatsapp.com/ItUqXznzdgR7CnewWq7qWe?mode=gi_t" target="_blank" class="btn-outline" style="display:inline-flex;align-items:center;gap:8px;">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
     <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.553 4.118 1.524 5.855L0 24l6.335-1.499A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.38l-.36-.214-3.733.883.916-3.619-.235-.372A9.818 9.818 0 1112 21.818z"/>
   </svg>
-  Join WhatsApp
+  Join Community
 </a>
         <a href="#" onclick="navigate('contact')" class="btn-outline">Contact Us</a>
       </div>
@@ -474,9 +568,36 @@
           <div class="tl-item"><h4>Today</h4><p>Cowartu stands as a dedicated platform shaping the next generation of voice artists, leading the Voice Revolution.</p></div>
         </div>
         <div class="mission-grid" style="margin-top:32px;">
-          <div class="mission-card"><h5>🎯 Mission</h5><p>Making professional voice acting education simple, accessible, and effective.</p></div>
-          <div class="mission-card"><h5>👁️ Vision</h5><p>Inspiring the next generation of voice talent to master their craft.</p></div>
-          <div class="mission-card"><h5>💎 Value</h5><p>Commitment to learning, passion for voice, and support for every aspiring artist.</p></div>
+          <div class="mission-card"><div class="mission-card" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src="https://lottie.host/4cd5638e-9f9f-440a-8dd2-8f0577fd39e9/h7nL6UR88v.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div><h5> Mission</h5><p>Making professional voice acting education simple, accessible, and effective.</p></div>
+          <div class="mission-card"><div class="mission-card" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src="https://lottie.host/06dd893d-6bc0-468c-a9c3-df01446e76e7/iqnHLEdPTr.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div><h5>Vision</h5><p>Inspiring the next generation of voice talent to master their craft.</p></div>
+          <div class="mission-card"><div class="mission-card" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src="https://lottie.host/7cc3f6cf-320a-4064-8120-71876d42a078/XOqIY6LvfB.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div><h5>Value</h5><p>Commitment to learning, passion for voice, and support for every aspiring artist.</p></div>
         </div>
       </div>
       <div style="position:relative;">
@@ -513,12 +634,22 @@
     <div class="courses-grid">
       <div class="course-card reveal">
         <span class="course-badge badge-starter">Starter</span>
-        <div class="course-icon">📖</div>
+        <div class="course-icon" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src=" https://lottie.host/653ff42f-1425-4ac7-a722-43f90d09f980/SzqGzSmoy3.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div> 
+
         <h3 class="course-title">PDF Document Course</h3>
-        <p>DOC B1 Voice Acting Document Course — beginner-friendly PDF for building a strong foundation. Available in Hindi & English.</p>
+        <p>DOC B1 Voice Acting Document Course — Beginner-friendly PDF for building a core foundation. Available in Hindi & English.</p>
         <div class="price-old">₹499 <span class="price-save">80% OFF</span></div>
         <div class="price">₹99</div>
-        <div class="price-label">One-time payment • Instant Digital Access</div>
+        <div class="price-label">One-time payment • Instant 30 Days Digital Access</div>
         <ul class="course-features">
           <li>Core fundamentals of voice acting</li>
           <li>Beginner challenges & solutions</li>
@@ -527,22 +658,32 @@
           <li>Energy control guidance</li>
           <li>Available in Hindi & English</li>
           <li>Beginner-friendly structure</li>
+           <li>Guidance Support</li>
         </ul>
         <a href="https://wa.me/919279044047?text=Hi%20Cowartu%20%F0%9F%91%8B%0AI%20want%20to%20buy%20the%20%E2%82%B999%20PDF%20Course." 
    target="_blank" 
-   class="btn-gold">
-  Get Course 
+   class="btn-course">
+  Get Course
 </a>
       </div>
       <div class="course-card reveal" style="transition-delay:.15s;">
         <span class="popular-tag">⭐ Most Popular</span>
         <span class="course-badge badge-pro">Masterclass</span>
-        <div class="course-icon">🔴</div>
+        <div class="course-icon" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src="https://lottie.host/ddb342ba-1c14-45cc-9854-e8146b71b586/GrbEKM98nU.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div>
         <h3 class="course-title">Live Master Class Course</h3>
         <p>Comprehensive interactive program. Live classes in Hindi with real-time feedback, mentorship & personalized corrections for industry-ready performance.</p>
         <div class="price-old">₹5,499 <span class="price-save">39% OFF</span></div>
         <div class="price">₹3,333</div>
-        <div class="price-label">Full Program • Live Interactive Classes</div>
+        <div class="price-label">Full Program • Regular Live 45 Days Classes • One-time payment</div>
         <ul class="course-features">
           <li>Live interactive sessions in Hindi</li>
           <li>Real-time feedback & mentorship</li>
@@ -551,13 +692,14 @@
           <li>Character performance techniques</li>
           <li>Portfolio building guidance</li>
           <li>Career & industry guidance</li>
-          <li>Telegram community access</li>
+          <li>Certification After Course</li>
+          <li>Guidance Support</li>
           <li>Personalized corrections</li>
         </ul>
        <a href="https://wa.me/919279044047?text=Hi%20Cowartu%20%F0%9F%91%8B%0AI%20want%20to%20buy%20the%20%E2%82%B93333%20Live%20Master%20Class%20Course." 
    target="_blank" 
-   class="btn-gold">
-  Get Course 
+   class="btn-course">
+  Get Course
 </a>
       </div>
     </div>
@@ -584,9 +726,36 @@
     <div class="contact-grid">
       <div class="contact-info">
         <h3>Get In Touch</h3>
-        <div class="contact-item"><div class="contact-icon">📧</div><div><h5>Email</h5><p><a href="/cdn-cgi/l/email-protection#22414d5543505657414d4c5643415662454f434b4e0c414d4f"><span class="__cf_email__" data-cfemail="ed8e829a8c9f99988e8283998c8e99ad8a808c8481c38e8280">[email&#160;protected]</span></a></p></div></div>
-        <div class="contact-item"><div class="contact-icon">📍</div><div><h5>Location</h5><p>Jadugoda, East Singhbhoom, Jharkhand – 832106</p></div></div>
-        <div class="contact-item"><div class="contact-icon">🕐</div><div><h5>Business Hours</h5><p>Mon – Fri: 9:00 AM – 6:00 PM<br/>Saturday: 10:00 AM – 4:00 PM<br/>Sunday: Closed</p></div></div>
+        <div class="contact-item"><div class="contact-icon" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src=" https://lottie.host/cc3fe5c4-cb3b-4b67-910c-48191e20cfc9/YZK30HkD0w.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div><div><h5>Email</h5><p><a href="/cdn-cgi/l/email-protection#22414d5543505657414d4c5643415662454f434b4e0c414d4f"><span class="__cf_email__" data-cfemail="ed8e829a8c9f99988e8283998c8e99ad8a808c8481c38e8280">[email&#160;protected]</span></a></p></div></div>
+        <div class="contact-item"><div class="contact-icon" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src="https://lottie.host/0d455936-dc43-4ca1-b852-6028325256ca/fGAv9y3jyn.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div><div><h5>Location</h5><p>Jadugoda, East Singhbhoom, Jharkhand – 832106</p></div></div>
+        <div class="contact-item"><div class="contact-icon" style="width:56px;height:56px;border-radius:16px;background:rgba(245,166,35,0.1);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:0;">
+  <dotlottie-player
+    src=" https://lottie.host/2a901a1c-f141-41b7-9689-d6147d04f574/W4vTq82PXY.lottie"
+    background="transparent"
+    speed="1"
+    style="width:48px;height:48px;"
+    loop
+    autoplay>
+  </dotlottie-player>
+</div><div><h5>Business Hours</h5><p>Mon – Fri: 9:00 AM – 6:00 PM<br/>Saturday: 10:00 AM – 4:00 PM<br/>Sunday: Closed</p></div></div>
        <div style="display:flex;gap:14px;align-items:center;margin-top:16px;">
         <a href="https://aratt.ai/@cowartu" target="_blank" class="social-btn" style="background:rgba(245,166,35,.1);border-color:rgba(245,166,35,.3);color:var(--gold);">🌐 Arattai</a>
 
@@ -621,13 +790,18 @@
 </div>
       </div>
       <div class="contact-form">
-        <h3>Send a Message</h3>
-        <div class="form-group"><label>Your Name</label><input type="text" id="cf-name" placeholder="e.g. Rahul Kumar"/></div>
-        <div class="form-group"><label>Email Address</label><input type="email" id="cf-email" placeholder="e.g. rahul@email.com"/></div>
-        <div class="form-group"><label>Message</label><textarea id="cf-msg" placeholder="Write your message here..."></textarea></div>
-        <button class="btn-gold" style="width:100%;" onclick="submitForm()">Send Message 📩</button>
-        <div class="form-success" id="form-success"><p style="font-size:2rem;">✅</p><p style="font-size:1.1rem;margin:8px 0;">Message Sent!</p><p style="color:var(--gray);font-size:0.9rem;">We'll get back to you soon.</p></div>
-      </div>
+  <h3>Send a Message</h3>
+  <div class="form-group"><label>Your Name</label><input type="text" id="cf-name" placeholder="e.g. Rahul Kumar"/></div>
+  <div class="form-group"><label>Email Address</label><input type="email" id="cf-email" placeholder="e.g. rahul@email.com"/></div>
+  <div class="form-group"><label>Message</label><textarea id="cf-msg" placeholder="Write your message here..."></textarea></div>
+  <button class="btn-gold" style="width:100%;" id="cf-btn" onclick="submitForm()">Send Message 📩</button>
+  <div class="form-success" id="form-success" style="display:none;">
+    <p style="font-size:2rem;">✅</p>
+    <p style="font-size:1.1rem;margin:8px 0;">Message Sent!</p>
+    <p style="color:var(--gray);font-size:0.9rem;">We'll get back to you soon.</p>
+  </div>
+</div>
+
     </div>
   </section>
 </div>
@@ -1061,7 +1235,7 @@
   </div>
   <div class="footer-bottom">
     <p>© 2025 Wartudu. All rights reserved. Unauthorized use is strictly prohibited.</p>
-    <p style="color:var(--gold);font-size:0.8rem;">Voices & Worlds — Wartudu</p>
+    <p style="color:var(--gold);font-size:0.8rem;">Wartudu</p>
   </div>
 </footer>
 
@@ -1093,17 +1267,40 @@ function revealOnScroll(){
 window.addEventListener('scroll',revealOnScroll);
 window.addEventListener('load',revealOnScroll);
 function submitForm(){
-  const name=document.getElementById('cf-name').value.trim();
-  const email=document.getElementById('cf-email').value.trim();
-  const msg=document.getElementById('cf-msg').value.trim();
-  if(!name||!email||!msg){alert('Please fill in all fields before sending.');return;}
-  const subject=encodeURIComponent('Inquiry from '+name);
-  const body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\nMessage:\n'+msg);
-  window.open('mailto:cowartucontact@gmail.com?subject='+subject+'&body='+body);
-  document.getElementById('form-success').style.display='block';
-  document.getElementById('cf-name').value='';
-  document.getElementById('cf-email').value='';
-  document.getElementById('cf-msg').value='';
+  const name  = document.getElementById('cf-name').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const msg   = document.getElementById('cf-msg').value.trim();
+  const btn   = document.getElementById('cf-btn');
+  if(!name || !email || !msg){
+    alert('Please fill in all fields before sending.');
+    return;
+  }
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  fetch('https://formspree.io/f/mbdzwylg', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ name: name, email: email, message: msg })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if(data.ok || data.next){
+      btn.style.display = 'none';
+      document.getElementById('cf-name').value = '';
+      document.getElementById('cf-email').value = '';
+      document.getElementById('cf-msg').value = '';
+      document.getElementById('form-success').style.display = 'block';
+    } else {
+      alert('Something went wrong. Please try again.');
+      btn.textContent = 'Send Message 📩';
+      btn.disabled = false;
+    }
+  })
+  .catch(() => {
+    alert('Network error. Please check your connection.');
+    btn.textContent = 'Send Message 📩';
+    btn.disabled = false;
+  });
 }
 </script>
 </body>
